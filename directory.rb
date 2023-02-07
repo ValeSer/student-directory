@@ -13,6 +13,4 @@ puts 'Freddy Krueger'
 puts 'The Joker'
 puts 'Joffrey Baratheon'
 puts 'Norman Bates'
-print 'Overall, we have '
-print student_count
-puts ' great students'
+puts "Overall, we have #{student_count} great students"
