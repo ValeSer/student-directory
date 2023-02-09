@@ -1,3 +1,5 @@
+require 'io/console'
+
 def input_students
   puts "Please enter a students' name"
   students = []
@@ -23,7 +25,7 @@ def input_students
 end
 
 def print_header
-  puts 'The students of Villains Academy'
+  puts 'The students of Villains Academy'.center(IO.console.winsize[1])
   puts '-------------'
 end
 
