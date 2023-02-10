@@ -49,6 +49,7 @@ end
 def print_menu
   puts "1. Input the student"
   puts "2. Show the student"
+  puts "3. Save the list to students.csv"
   puts "9. Exit"
 end
 
@@ -63,6 +64,8 @@ def process(selection)
     input_students
   when "2"
     show_students
+  when "3"
+    save_students
   when "9"
     exit
   else
