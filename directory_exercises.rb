@@ -7,7 +7,8 @@ def input_students
   
   while !name.empty? do
     cohort = gets.chomp
-    cohort == '' ? cohort = :november : cohort.to_sym
+    cohort = cohort == '' ? :november : cohort.to_sym
+    
     puts "Please enter the hobbies of the student"
     hobbies = gets.chomp
     puts "Please enter the country of birth of the student"
@@ -30,6 +31,8 @@ def print_header
   puts 'The students of Villains Academy'.center(IO.console.winsize[1])
   puts '-------------'
 end
+
+
 
 def print(students)
   i = 0
