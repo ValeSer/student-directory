@@ -4,7 +4,7 @@ def input_students
   puts "Please enter a students' name and cohort"
   students = []
   name = gets.chomp
-  
+
   while !name.empty? do
     cohort = gets.chomp
     cohort = cohort == '' ? :november : cohort.to_sym
@@ -15,7 +15,7 @@ def input_students
     country_of_birth = gets.chomp
     puts "Please enter the height of the student"
     height = gets.chomp
-      students << {name: name, cohort: cohort, :hobbies => hobbies, "country of birth" => country_of_birth , :height => height}
+      students << {name: name, cohort: cohort, hobbies: hobbies, country_of_birth: country_of_birth , height: height}
       if students.length == 1
         puts "Now we have #{students.count} student"
       else
@@ -37,7 +37,7 @@ end
 def print(students)
   i = 0
   while i < students.length
-      puts "#{i+1}. #{students[i][:name]} (#{students[i][:cohort]} cohort, hobbies are: #{students[i][:hobbies]}, they come from #{students[i]["country of birth"]} and are #{students[i][:height]}cm tall)"
+      puts "#{i+1}. #{students[i][:name]} (#{students[i][:cohort]} cohort, hobbies are: #{students[i][:hobbies]}, they come from #{students[i][:country_of_birth]} and are #{students[i][:height]}cm tall)"
       i +=1
     end
 end
