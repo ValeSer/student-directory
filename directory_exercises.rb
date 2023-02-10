@@ -76,5 +76,12 @@ def interactive_menu
   end
 end
 
-interactive_menu
-
+def save_students
+  file = File.open("student.csv", "w")
+  @students.each do |student|
+    student_data = [student[:name], student[:cohort]]
+    csv_line = student_data.joi(",")
+    file.puts csv_line
+  end
+  file.close
+end
