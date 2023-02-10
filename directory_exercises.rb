@@ -15,12 +15,12 @@ def input_students
     country_of_birth = gets.chomp
     puts "Please enter the height of the student"
     height = gets.chomp
-      students << {name: name, cohort: cohort, hobbies: hobbies, country_of_birth: country_of_birth , height: height}
-      puts "Now we have #{students.count} student" + (students.length == 1 ? '' : 's')
-      puts "Please enter another name or just hit return twice to exit"
-      name = gets.chomp
-    end
-    students
+    students << {name: name, cohort: cohort, hobbies: hobbies, country_of_birth: country_of_birth , height: height}
+    puts "Now we have #{students.count} student" + (students.length == 1 ? '' : 's')
+    puts "Please enter another name or just hit return twice to exit"
+    name = gets.chomp
+  end
+  students
 end
 
 def print_header
